@@ -14,6 +14,11 @@
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -23,6 +28,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    
 </head><!--/head-->
 
 <body class="homepage">
@@ -48,27 +54,28 @@
     })(window,document,'script','dataLayer','GTM-KVHX5K');</script>
     <!-- End Google Tag Manager -->
     <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-6">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +91 9739789657</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-6">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a target="_blank" href="https://www.facebook.com/Techninzaz/"><i class="fa fa-facebook"></i></a></li>
-                                <li><a target="_blank" href="https://twitter.com/Techninzaz"><i class="fa fa-twitter"></i></a></li>
-                                <li><a target="_blank" href="https://www.linkedin.com/company/10585577?trk=tyah&trkInfo=clickedVertical%3Acompany%2CentityType%3AentityHistoryName%2CclickedEntityId%3Acompany_10585577%2Cidx%3A0"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                       </div>
+        
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                            <div class="top-number"><p><i class="fa fa-phone-square"></i>  +91 9739789657</p></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                           <div class="social">
+                                <ul class="social-share">
+                                    <li><a target="_blank" href="https://www.facebook.com/Techninzaz/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/Techninzaz"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/company/10585577?trk=tyah&trkInfo=clickedVertical%3Acompany%2CentityType%3AentityHistoryName%2CclickedEntityId%3Acompany_10585577%2Cidx%3A0"><i class="fa fa-linkedin"></i></a></li> 
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                           </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,7 +84,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo/logo.png" style="width:230px" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo/logo1.png" style="width:230px" alt="logo"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
@@ -109,6 +116,7 @@
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slider" data-slide-to="1"></li>
                 <li data-target="#main-slider" data-slide-to="2"></li>
+                 <li data-target="#main-slider" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
 
@@ -145,11 +153,11 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -166,11 +174,11 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -187,11 +195,11 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <!-- <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img1.png" class="img-responsive">
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -204,6 +212,151 @@
             <i class="fa fa-chevron-right"></i>
         </a>
     </section><!--/#main-slider-->
+
+    <div id="marqueeDetails">
+        <marquee behavior="scroll" scrollamount="5" style="text-align:justify;">
+            <p id="marqueeText">
+                <strong>New JAVA Weekdays Batch strating from Next week      |     AngularJS batch starting from 18th February     |     Weekdays Evening Web Development batch already started</strong>
+            </p>
+        </marquee>
+    </div>
+
+    <!--Code for better UI-->
+    <!-- <div class="bann-grid">
+        <div class="container">
+            <h3 class="text-center">Popular Courses</h3>
+            <div class="bann-grid-main wow bounceInRight" data-wow-delay="0.3s">
+                <div class="col-md-3 bann-works">
+                    <div class="ban-setting">
+                      <img src="images/slider/MobileApps.jpg" alt="" class="img-responsive">
+                           <div class="captn">
+                                <h4><b>Mobile App Learning</b></h4>       
+                                <p class="captnContent"></p>      
+                            </div>
+                     </div>
+                </div>
+                <div class="col-md-3 bann-works">
+                    <div class="ban-setting">
+                      <img src="images/slider/WebDevelopment.jpg" alt="" class="img-responsive">
+                          <div class="captn">
+                                <h4><b>Web Development</b></h4>   
+                                <p class="captnContent">Syproatek provides certifications through through a panel of UKAS, ANAB, ACCAB, NABCB and Many more accreditation bodies around the Globe</p>                       
+                            </div>
+                     </div>
+                </div>
+                <div class="col-md-3 bann-works">
+                    <div class="ban-setting">
+                      <img src="images/slider/JAVACourse.jpg" alt="" class="img-responsive">
+                          <div class="captn">
+                                <h4><b>Java Learning Program</b></h4>    
+                                <p class="captnContent">Syproatek provides diligent and highly proficient Audits on behalf of other Certification bodies as well as Clients complementing to their capabilities in assessing their certified/vendor organizations</p>                       
+                            </div>
+                     </div>
+                </div>
+                <div class="col-md-3 bann-works">
+                    <div class="ban-setting">
+                      <img src="images/slider/C2CProgram.jpg" alt="" class="img-responsive">
+                            <div class="captn">
+                                <h4><b>Campus 2 Corporate</b></h4>      
+                                <p class="captnContent">Syproatek Certifications provides Accredited Lead Assessor / Internal Auditor trainings in ISO 9001(QMS), ISO 14001(EMS), ISO 18001 (OHSMS), ISO 20000,ISO 27001, ISO 10002</p>     
+                            </div>
+                     </div>
+                </div>
+              <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div> -->
+    <!--bann beloew end here-->
+
+    <!-- <section class="popularCourses shortcode-item">
+        <div class="container">
+            <h2 class="text-center">Popular Courses</h2>
+            <div class="row text-center">
+                <div class="col-sm-3 plan price-one wow fadeInDown">
+                    <ul>
+                        <li class="heading-one popularCourse1">
+                            <img src="images/MobileApp.jpg">
+                        </li>
+                        <li><b>Hybrid Mobile Application</b></li>
+                        <li><b>Development</b></li>
+                        <li>Servers</li>
+                        <li>Advance JAVA</li>
+                        <li>Mini-Project Development</li>
+                        <li class="plan-action">
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3 plan price-two wow fadeInDown">
+                    <ul>
+                        <li class="heading-two popularCourse2">
+                            <img src="images/javaTraining.jpg">
+                        </li>
+                        <li>IDES</li>
+                        <li>Servers</li>
+                        <li>Web UI Programming</li>
+                        <li>RDBMS</li>
+                        <li>Frame works</li>
+                        <li class="plan-action">
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3 plan price-two wow fadeInDown">
+                    <ul>
+                        <li class="heading-two popularCourse3">
+                            <img src="images/webDevelopment.jpg">
+                        </li>
+                        <li>IDES</li>
+                        <li>Servers</li>
+                        <li>Web UI Programming</li>
+                        <li>RDBMS</li>
+                        <li>Frame works</li>
+                        <li class="plan-action">
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3 plan price-two wow fadeInDown">
+                    <ul>
+                        <li class="heading-two popularCourse4">
+                            <img src="images/angularJS.jpg">
+                        </li>
+                        <li>IDES</li>
+                        <li>Servers</li>
+                        <li>Web UI Programming</li>
+                        <li>RDBMS</li>
+                        <li>Frame works</li>
+                        <li class="plan-action">
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                 <div class="col-sm-3 plan price-three wow fadeInDown">
+                    <img src="images/ribon_one.png">
+                    <ul>
+                        <li class="heading-three">
+                            <h3>Premium JAVA Learning Program</h3>
+                            <span>140 Hours/35 Days</span>
+                        </li>
+                        <li>Core JAVA, JAVA OOPS concepts</li>
+                        <li>Servers, Tools</li>
+                        <li>Advance JAVA, RDBMS</li>
+                        <li>Web UI Programming</li>
+                        <li>Frame works</li>
+                        <li class="plan-action">
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign up</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </section> -->
 
     <section id="feature" >
         <div class="container">
@@ -238,30 +391,6 @@
                             <h3>Our team of Industry Experts, Inspire students to get the better Corporate job.</h3>
                         </div>
                     </div><!--/.col-md-4-->
-                
-                    <!-- <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-leaf"></i>
-                            <h2>Adipisicing elit</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cogs"></i>
-                            <h2>Sed do eiusmod</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-heart"></i>
-                            <h2>Labore et dolore</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div> -->
                 </div><!--/.services-->
             </div><!--/.row-->    
         </div><!--/.container-->
@@ -277,37 +406,11 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Web Development</a> </h3>
                                 <p>We have helped students make interactive and new generation websites.</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/seminar1_small.jpg" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Java Training Path</a></h3>
-                                <p>Get trained by experianced faculty in small batches.</p>
-                                <a class="preview" href="images/portfolio/full/seminar1_one.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Mobile Applications</a></h3>
-                                <p>College level projects shaped up into Industry standard Mobile Application.</p>
                                 <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
@@ -316,12 +419,38 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/institute1.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Java Training Path</a></h3>
+                                <p>Get trained by experianced faculty in small batches.</p>
+                                <a class="preview" href="images/portfolio/full/institute1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Mobile Applications</a></h3>
+                                <p>College level projects shaped up into Industry standard Mobile Application.</p>
+                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/institute2.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Coaching Classes</a></h3>
                                 <p>Coaching Classes for computer related subjects for all courses.</p>
-                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/portfolio/full/institute2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -329,12 +458,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/seminar1_small.jpg" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Softskill Training </a></h3>
                                 <p>An essential module to step up your into Corporate Industry.</p>
-                                <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/portfolio/full/seminar1_one.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -792,7 +921,7 @@
                     <div class="form-group modalForm">
                         <label class="col-sm-2 control-label" for="email" >Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="emailId" placeholder="Email" />
+                            <input type="text" class="form-control" id="emailId" placeholder="Email" />
                         </div>
                     </div>
                     <div class="form-group modalForm"> 
@@ -857,13 +986,14 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         $('#main-slider.carousel').carousel({
-            interval: 2000
+            interval: 1000
         });
     </script>
 </body>

@@ -1,21 +1,14 @@
 jQuery(function($) {
 	'use strict',
 
-	$(window).scroll(function() {
-	  if ($(document).scrollTop() > 50) {
-	    $('.top-bar').hide();
-	  } else {
-	    $('.top-bar').show();
-	  }
-	});
-
 	//Initiat WOW JS
 	new WOW().init();
 
 	//#main-slider
-	$(function(){
+	/*$(function(){
 		console.log("Triggered");
-	});
+		
+	});*/
 
 
 	// accordian
@@ -27,128 +20,56 @@ jQuery(function($) {
 	 	$(this).closest('.panel-heading').toggleClass('active');
 	});
 
-$(document).on('ready', function(evt, data){
-	var url = window.location.pathname;
-	var filename = url.substring(url.lastIndexOf('/')+1);
-	//console.log(filename);
-	if(filename == ''){
-		localStorage.setItem("autoPopup", "0");
+	$(document).on('ready', function(evt, data){
+		var url = window.location.pathname;
+		var filename = url.substring(url.lastIndexOf('/')+1);
+		//console.log(filename);
+		if(filename == ''){
+			localStorage.setItem("autoPopup", "0");
+			setTimeout(function(){ 
+				if(localStorage.getItem("autoPopup") == "0"){
+					$("#myModal").modal();
+					localStorage.setItem("autoPopup", "1");
+				}
+			}, 5000);
+		} else if(filename == "shortcodes.html"){
+			$("#courses").modal();
+			$("#popupCourseClose").on('click',function(){
+				//alert("Clicked");
+				$("#courses").modal('hide');
+			});
+		} 
+	});
+
+	// portfolio filter
+	$(window).load(function(){
+		'use strict';
+
+		/*localStorage.setItem("autoPopup", "0");
+
 		setTimeout(function(){ 
 			if(localStorage.getItem("autoPopup") == "0"){
 				$("#myModal").modal();
 				localStorage.setItem("autoPopup", "1");
 			}
-		}, 5000);
-	} else if(filename == "shortcodes.html"){
-		$("#courses").modal();
-		$("#popupCourseClose").on('click',function(){
-			//alert("Clicked");
-			$("#courses").modal('hide');
+		}, 5000);*/
+		
+
+		var $portfolio_selectors = $('.portfolio-filter >li>a');
+		var $portfolio = $('.portfolio-items');
+		$portfolio.isotope({
+			itemSelector : '.portfolio-item',
+			layoutMode : 'fitRows'
 		});
-	} 
-});
-
-	// portfolio filter
-$(window).load(function(){
-	'use strict';
-	/*localStorage.setItem("autoPopup", "0");
-
-	setTimeout(function(){ 
-		if(localStorage.getItem("autoPopup") == "0"){
-			$("#myModal").modal();
-			localStorage.setItem("autoPopup", "1");
-		}
-	}, 5000);*/
-	var $portfolio_selectors = $('.portfolio-filter >li>a');
-	var $portfolio = $('.portfolio-items');
-	$portfolio.isotope({
-		itemSelector : '.portfolio-item',
-		layoutMode : 'fitRows'
-	});
-	
-	$portfolio_selectors.on('click', function(){
-		$portfolio_selectors.removeClass('active');
-		$(this).addClass('active');
-		var selector = $(this).attr('data-filter');
-		$portfolio.isotope({ filter: selector });
-		return false;
-	});
-});
-
-	//Email Validate Function
-	function validateEmail($email) {
-	    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	    if (!emailReg.test($email)) {
-	        return false;
-	    } else {
-	        return true;
-	    }
-	}
-
-	// Registration Form
-	var registerForm = $('#submitData');
-	registerForm.click(function(event){
-		//alert("Here");
-		var flag = 0;
-	    var phonenumber = $("#phoneNumber").val();
-	    var numberPattern = /^[a-zA-Z!@#\$%\^\&*\)\(+=._-]+$/g;
-	    var email = $("#emailId").val();
-		event.preventDefault();
-		console.log(flag);
 		
-		$("#registerForm input").each(function() {
-	        var type = this.type;
-	        var tag = this.tagName.toLowerCase();
-	        if (type == 'text') {
-	            if (this.value == '' || this.value == null || this.value == undefined) {
-	                flag = 1;
-	                $('#' + this.id).addClass("error");
-	            } else {
-	                $('#' + this.id).removeClass("error");
-	            }
-	        }
-	    });
-		
-		if (phonenumber == false || phonenumber.length < 10 || phonenumber.match(numberPattern)) {
-	        flag = 1;
-	        console.log(flag);
-	        $("#phoneNumber").addClass("error");
-	    } else {
-	        $("#phoneNumber").removeClass("error");
-	    }
-
-	    if (!validateEmail(email) || email == '') {
-	        flag = 1;
-	        console.log(flag);
-	        $("#emailId").addClass("error");
-	    } else {
-	        $("#emailId").removeClass("error");
-	    }
-
-	    if (flag != 1) {
-	    	$.ajax({
-				url     : "http://www.techninzaz.com/backend_code.php",
-				type    : "POST",
-				data    : {
-							"name" : $("#inputname").val(),
-							"email" : $("#emailId").val(),
-							"phonenumber" : $("#phoneNumber").val(),
-							"subject" : $("#subject").val(),
-							"func" : 'registerV2'
-						},
-				success : function (data){
-					alert("We have Received your Request");
-					//console.log(data);
-					$("input[type=text],[type=email], [type='tel'], textarea").val("");
-				},
-				error : function(e){
-					console.log(e.responseText);
-				}
-			});
-			$("input[type='text'],[type='email'], [type='tel'], textarea").val("");
-	    }
+		$portfolio_selectors.on('click', function(){
+			$portfolio_selectors.removeClass('active');
+			$(this).addClass('active');
+			var selector = $(this).attr('data-filter');
+			$portfolio.isotope({ filter: selector });
+			return false;
+		});
 	});
-
 
 	// Contact form
 	var form = $('#main-contact-form');
@@ -165,6 +86,43 @@ $(window).load(function(){
 			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
 		});
 	});
+
+
+	// Registration Form
+
+	var registerForm = $('#submitData');
+	registerForm.click(function(event){
+		event.preventDefault();
+		if($("#inputname").val() == null || $("#inputname").val() == '' && $("#emailId").val() == null || $("#emailId").val() == '' && $("#phoneNumber").val() == null || $("#phoneNumber").val() == ''){
+			alert("All the fields are Mandatory");
+			//console.log($("#inputname").val()+'  '+$("#emailId").val()+' '+$("#phoneNumber").val());
+		} else {
+			alert("We have Received your Request");
+			//console.log($("#inputname").val()+'  '+$("#emailId").val()+' '+$("#phoneNumber").val()+'  '+$("#subject").val());
+			$.ajax({
+				url     : "http://www.techninzaz.com/backend_code.php",
+				type    : "POST",
+				data    : {
+							"name" : $("#inputname").val(),
+							"email" : $("#emailId").val(),
+							"phonenumber" : $("#phoneNumber").val(),
+							"subject" : $("#subject").val(),
+							"func" : 'registerV2'
+						},
+				success : function (data){
+					//alert("We have Received your Request");
+					//console.log(data);
+					$("input[type=text],[type=email], [type='tel'], textarea").val("");
+				},
+				error : function(e){
+					console.log(e.responseText);
+				}
+			});
+			$("input[type='text'],[type='email'], [type='tel'], textarea").val("");
+		}
+	});
+
+
 	// Registration C2C Form
 
 	var registerC2CForm = $('#submitDataC2C');

@@ -307,7 +307,6 @@ input.search-form:hover {
   border-radius: 0;
   margin-bottom: 0;
   background: #151515;
-  padding: 15px 0;
   padding-bottom: 0;
 }
 
@@ -315,6 +314,9 @@ input.search-form:hover {
   margin-top: 32px;
  }
 
+.navbar-header{
+  height: 70px !important;
+}
 .navbar-nav>li{
   margin-left: 35px;
   padding-bottom: 28px;
@@ -450,7 +452,7 @@ input.search-form:hover {
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 730px;
+  height: 700px;
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -2761,3 +2763,144 @@ div.horiFormTextArea>div>textarea{
 .superColor{
   background-image: url('../images/background.jpg');
 }
+
+
+
+/* error input */
+.error, textarea.error {
+   border: 2px solid rgb(228,35,19) !important;
+   color: rgb(228,35,19);
+}
+
+/* error message */
+.error_space {
+  margin-top: 10px;
+  color: #ed3023;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: Open Sans Light;
+}
+
+
+
+
+.bann-text h3 {
+    font-size: 3em;
+    color:#e68523;
+    margin-bottom: 0.3em;
+    font-family: 'Amaranth', sans-serif;
+}
+
+.bann-text p {
+    font-size: 0.95em;
+    color: #fff;
+    width: 32%;
+    line-height: 1.8em;
+}
+
+.btn-slide {
+  padding: 8px 20px;
+  background: #c52d2f;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+#marqueeDetails{
+  background-color: #7CCACE;
+  /*padding: 5px;*/
+}
+
+#marqueeText{
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+/*--bann grid start here--*/
+.bann-grid {
+    padding: 1em 0em;
+}
+.bann-works h6 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0.5em;
+    color: #e68523;
+    font-family: 'Amaranth', sans-serif;
+}
+
+.captn a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 0 3px;
+}
+.captn a:hover {
+    transform: rotateY(360deg);
+}
+.captn h4 {
+    font-size: 1.2em;
+    color: #fff;
+    padding: 9px 0 4px;
+    font-family: 'Amaranth', sans-serif;
+}
+.captn p {
+    font-size: 1em;
+    color: #fff;
+}
+.ban-setting:hover .captn h4 {
+    margin-top:55px;
+}
+.bann-works {
+    padding: 0px 10px 0px 0px;
+    margin-bottom: 0.8em;
+}
+.ban-setting:hover .captn h4 {
+    margin-top: 35px;
+}
+.ban-setting .captn {
+    bottom: -70%;
+}
+
+.ban-setting .captn {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    bottom: -83%;
+    right: 0;
+    /*background-color:rgba(37, 167, 173, 0.69);*/
+    background-color: rgba(0, 0, 0, 0.69);
+    text-align: center;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ban-setting{
+  display:block;
+  position:relative;
+  overflow:hidden;
+  height: 300px;
+}
+.ban-setting img{
+  width:100%;
+  height: 100%;
+}
+.ban-setting:hover .captn {
+  bottom: 0%;
+}
+.bann-grid h3{
+    font-size: 3em;
+    color:#e68523;
+    margin-bottom: 0.8em;
+    font-family: 'Amaranth', sans-serif;
+}
+
+
+/*--bann grid end here--*/

@@ -12,7 +12,7 @@
 
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
-	} */
+	}*/ 
 
 	$db_username = 'techninz_root';
 	$db_password = 'rootuser';
@@ -31,7 +31,7 @@
 		$phonenumber = mysqli_real_escape_string($conn,$_POST["phonenumber"]);
 		$yourSubject = mysqli_real_escape_string($conn,$_POST["subject"]);
 
-		echo ("insert into registerV2(id,name,email,phonenumber,subject) values('','$name','$email','$phonenumber','$yourSubject')");
+		//echo ("insert into registerV2(id,name,email,phonenumber,subject) values('','$name','$email','$phonenumber','$yourSubject')");
 		$q1 = mysqli_query($conn, "INSERT INTO `registerV2`(`id`, `name`, `email`, `phonenumber`, `subject`) VALUES ('','$name','$email','$phonenumber','$yourSubject')");
 
 		$mainResponse = array();
