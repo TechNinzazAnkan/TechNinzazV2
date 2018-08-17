@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^leadtracker\.techninzaz\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.leadtracker\.techninzaz\.com$
+RewriteRule ^/?$ "http\:\/\/techninzaz\.com\/TechNinzaz_LeadTracker\/" [R=301,L]
+

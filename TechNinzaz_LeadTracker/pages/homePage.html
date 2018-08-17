@@ -1,0 +1,177 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="pagesStarting homePage">
+    <div class="inputBlocks">
+        <div class="contentAlignment">
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="prosOrgName">Date</label>
+                        <input type="date" ng-model="submit_formData.st_caller_date     " class="form-control" id="prospectName" placeholder="Date of Calling">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactPerson">Student Name</label>
+                        <input type="text" ng-model="submit_formData.st_name" class="form-control" id="personName" placeholder="Student Full Name">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMob">Mobile Number</label>
+                        <input type="tel" ng-model="submit_formData.st_mobile" class="form-control" maxlength="10" id="mobile" placeholder="Student Mobile Number" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMail">Email ID</label>
+                        <input type="email" ng-model="submit_formData.st_email" class="form-control" id="email" placeholder="Student Email ID" />
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMob">Requirement</label>
+                        <select class="form-control" ng-model="submit_formData.st_requirement" id="cfbf_courseName">
+                            <option value="">---Please select---</option>
+                            <option value="Core Java">Core Java Training</option>
+                            <option value="Core & Advance Java">Core & Advance Java</option>
+                            <option value="Java Frameworks">Java Frameworks(Spring & Hibernate)</option>
+                            <option value="Premier Java Program">Premier Java Program</option>
+                            <option value="MySQL">MySQL</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="JavaScript & jQuery">JavaScript & jQuery</option>
+                            <option value="JavaScript & AngularJS">JavaScript & AngularJS</option>
+                            <option value="AngularJS">AngularJS Training</option>
+                            <option value="JavaScript,jQuery,AngularJS">JavaScript,jQuery,AngularJS</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Corporate Web Development">Corporate Web Development</option>
+                            <option value="Web Development & jQuery">Web Development & jQuery</option>
+                            <option value="Web Development & AngularJS">Web Development & AngularJS</option>
+                            <option value="Mobile Application Development">Mobile Application Development</option>
+                            <option value="PhoneGap & Cordova">PhoneGap & Cordova</option>
+                            <option value="Corporate Soft Skills">Corporate Soft Skills</option>
+                            <option value="Campus 2 Corporate">Campus 2 Corporate</option>
+                            <option value="Soft Skills Training">Soft Skills Training</option>
+                            <option value="Communication Soft Skills">Communication Soft Skills</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactLand">Address</label>
+                        <input type="text" ng-model="submit_formData.st_address" class="form-control" id="landline" placeholder="Student Address" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="sourceReference">Source of reference</label>
+                        <select class="form-control" ng-model="submit_formData.st_source_reference">
+                            <option value="">---Please select---</option>
+                            <option value="UrbanPro">UrbanPro</option>
+                            <option value="Reference">Reference </option>
+                            <option value="Website">Website</option>
+                            <option value="Posters">Posters</option>
+                            <option value="Corporate Training">Corporate Training</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="sourceReference">Availability</label>
+                        <select class="form-control" ng-model="submit_formData.st_availability">
+                            <option value="">---Please select---</option>
+                            <option value="Weekdays">Weekdays</option>
+                            <option value="Weekend">Weekend </option>
+                            <option value="Online">Online</option>
+                            <option value="Corporate">Corporate</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <label for="sourceReference">Lead Type</label>
+                    <select class="form-control" ng-model="submit_formData.st_lead_type">
+                        <option value="">---Please select---</option>
+                        <option value="Enrolled">Enrolled</option>
+                        <option value="Interested">Interested</option>
+                        <option value="On Hold">On Hold</option>
+                        <option value="Not Interested">Not Interested</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactwebsite">Lead Fees</label>
+                        <input type="number" ng-model="submit_formData.st_lead_fees" class="form-control" id="landline" placeholder="Proposed Fees" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactwebsite">Comment</label>
+                        <textarea class="form-control" ng-model="submit_formData.st_comment" id="website" placeholder="Comments"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <div class="col-md-10 col-sm-10">
+                          <button type="submit" id="submitButton" class="btn btn-default" ng-click="addDetails(submit_formData)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-12 col-sm-12 rightBlock" >
+        <table id="leadDataTable" class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email ID</th>
+                    <th>Requirement</th>
+                    <th>Address</th>
+                    <th>Reference</th>
+                    <th>Availability</th>
+                    <th>Lead Type</th>
+                    <th>Lead Fees</th>
+                    <th>Comment</th>
+                    <!-- <th>Created By</th> -->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in loadData">
+                    <td>{{a.st_date}}</td>
+                    <td>{{a.st_name}}</td>
+                    <td>{{a.st_mobile}}</td>
+                    <td>{{a.st_email}}</td>
+                    <td>{{a.st_requirement}}</td>
+                    <td>{{a.st_address}}</td>
+                    <td>{{a.st_source_reference}}</td>
+                    <td>{{a.st_availability}}</td>
+                    <td>{{a.st_lead_type}}</td>
+                    <td>{{a.st_lead_fees}}</td>
+                    <td>{{a.st_comment}}</td>
+                    <!-- <td>{{a.st_createdby}}</td> -->
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/><br/>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+            <img src="images/load2.gif">
+        </div>
+    </div>
+</div>

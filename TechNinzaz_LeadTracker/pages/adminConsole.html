@@ -1,0 +1,12 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="dd_main_div">
+    <div class="dd_radioTabsDiv">
+        <div class="dd_noRadio" ng-repeat="v in setOfOptions" ng-class="{radioButton:selectedTab.value == v.name}" ng-click="loadRespectiveData(selectedTab.value)">
+            <input type="radio" value="{{v.name}}" id="{{v.name}}" ng-model="selectedTab.value" ng-change="setSelected()">
+            <label for="{{v.name}}" class="labelVertical">{{v.label}}</label>
+        </div>
+    </div>
+    <div class="tab-content clearfix">
+            <div ng-include="tableURLS[selectedTab.value]" class="col-sm-12 col-md-12" style="padding:10px;"></div>
+    </div>
+</div>

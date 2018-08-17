@@ -2644,6 +2644,12 @@ shortcodes page css
   margin: auto;
 }
 @media screen and (max-width: 768px) {
+  body{
+    width: 95% !important;
+  }
+  #myModal{
+    width: 92%;
+  }
   #tcb-testimonial-carousel .media-object {
     margin-bottom: 15px;
   }
@@ -2668,6 +2674,9 @@ shortcodes page css
 
   .modalCenter{
     padding-bottom: 0 !important;
+  }
+  .navbar-nav>li{
+    margin-left: 0px;
   }
 }
 
